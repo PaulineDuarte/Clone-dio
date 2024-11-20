@@ -13,7 +13,7 @@ export const Container = styled.main`
 `
 
 export const Wrapper = styled.div`
-    max-width: 300px;
+    max-width: 368px;
 `
 
 export const Column = styled.div`
@@ -67,7 +67,8 @@ export const SubtitleCriar = styled.p`
     font-weight: 400;
     font-size: 18px;
     line-height: 25px;
-    margin-bottom: 35px;
+    margin-top: 0px;
+    color: #fffff; 
 `
 
 export const FazerCadastroText  = styled.p`
@@ -77,15 +78,15 @@ export const FazerCadastroText  = styled.p`
     font-size: 14px;
     line-height: 19px;
 
-    color: #E5E044;
-` 
+    color: #ffffff;
 
-export const FaçaText =  styled.p`
+    span {
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 700;
     font-size: 14px;
     line-height: 19px;
-
-    color: #23DD7A;
-`
+    
+    color:#23DD7A;
+    }
+` 
