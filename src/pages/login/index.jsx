@@ -13,6 +13,9 @@ import { Container, Title, Column, TitleLogin, SubtitleLogin, EsqueciText, Criar
 const Login = () => {
 
     const navigate = useNavigate()
+    const handleClickSignIn = () => {
+        navigate('/cadastro')
+    }
 
     const { control, handleSubmit, formState: { errors  } } = useForm({
         reValidateMode: 'onChange',
@@ -29,8 +32,20 @@ const Login = () => {
             }
 
             alert('Usuário ou senha inválido')
-        }catch(e){
-            //TODO: HOUVE UM ERRO
+        }catch(error){
+            console.error('Erro ao realizar login:', error);
+            
+            // Verifica se é um erro da API ou outro tipo de erro
+            if (error.response) {
+                // Erros retornados pelo servidor
+                alert(`Erro do servidor: ${error.response.data.message || 'Tente novamente mais tarde.'}`);
+            } else if (error.request) {
+                // Nenhuma resposta do servidor
+                alert('Erro de rede: Não foi possível se conectar ao servidor.');
+            } else {
+                // Outros erros (ex.: erro ao configurar a requisição)
+                alert(`Erro desconhecido: ${error.message}`);
+            }
         }
     };
 
@@ -56,7 +71,7 @@ const Login = () => {
                 </form>
                 <Row>
                     <EsqueciText>Esqueci minha senha</EsqueciText>
-                    <CriarText>Criar Conta</CriarText>
+                    <CriarText onClick={handleClickSignIn }>Criar Conta</CriarText>
                 </Row>
                 </Wrapper>
             </Column>
