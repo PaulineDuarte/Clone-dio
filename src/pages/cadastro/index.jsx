@@ -4,6 +4,7 @@ import { Button } from '../../components/Button';
 import { Header } from '../../components/Header';
 import { Input } from '../../components/Input';
 import { api } from '../../services/api';
+import { Link } from 'react-router-dom';
 
 import { useForm } from "react-hook-form";
 
@@ -78,7 +79,10 @@ const Cadastro = () => {
                     <SubtitleCriar>Ao clicar em "criar minha conta grátis", declaro que aceito as Políticas de Privacidade e os Termos de Uso da DIO.</SubtitleCriar>
                     </Row>
                     <Row>
-                    <JaTenhoConta>já tenho conta.<span onClick={handleClickSignIn}> Fazer login</span></JaTenhoConta>
+                    <JaTenhoConta>
+                    <Link to="/Login"> já tenho conta.
+                    </Link>
+                    <span onClick={handleClickSignIn}> Fazer login</span></JaTenhoConta>
                     </Row>
                 </Wrapper>
             </Column>

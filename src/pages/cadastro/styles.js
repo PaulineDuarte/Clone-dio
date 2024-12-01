@@ -77,19 +77,26 @@ export const SubtitleCriar = styled.p`
 
 
 export const JaTenhoConta  = styled.p`
-   font-family: 'Open Sans';
+a {
+    font-family: 'Open Sans';
     font-style: normal;
     font-weight: 700;
     font-size: 12px;
     line-height: 19px;
     text-align: left;
     float: left;
-    margin-right: 10px;
     color:#FFFFFF;
     cursor: pointer;
-
+    text-decoration:none; 
+}
 span {
- color: #23DD7A;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 19px;
+    color: #23DD7A;
+    cursor: pointer;
 
 }
 ` 

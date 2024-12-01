@@ -1,6 +1,6 @@
 import React from 'react'
 import logo from '../../assets/logo-dio.png';
-
+import { Link } from 'react-router-dom';
 import { Button } from '../Button';
 
 import { Container, Wrapper, BuscarInputContainer, Input, Row, Menu, MenuRight, UserPicture} from './styles';
@@ -27,8 +27,12 @@ const Header = ({autenticado}) => {
               ) : (
               <>
                 <MenuRight href="/">Home</MenuRight>
-                <Button title="Entrar" />
-                <Button title="Cadastrar" />
+                <Link to="/Login">
+                  <Button title="Entrar"/>
+                </Link>
+                <Link to="/cadastro">
+                  <Button title="Cadastrar" />
+                </Link>
               </>)}
           </Row>
       </Container>

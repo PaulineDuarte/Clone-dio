@@ -71,3 +71,6 @@ export const Input = styled.input`
     border: 0;
     color: #FFFFFF;
 `
+export const Button = styled.button`
+    cursor: pointer;
+`
